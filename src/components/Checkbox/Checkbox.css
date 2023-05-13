@@ -46,16 +46,24 @@
 }
 
 @media screen and (max-width: 767px) {
-  .checkbox-group {
+  /* .checkbox-group {
     margin-top: 29px;
+  } */
+  .checkbox-container {
+    position: absolute;
+    left: calc(50% - 90px);
+    top: 105px;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 
   .checkbox-group__title {
     font-size: 11px;
   }
-
+/* 
   .checkbox-group__button {
     margin: 0 13px 0 0;
-  }
+  } */
 
 }

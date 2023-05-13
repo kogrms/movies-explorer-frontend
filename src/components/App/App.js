@@ -20,15 +20,17 @@ import Page404 from "../Page404/Page404";
 // import * as constants from "../../utils/constants";
 
 function App() {
-  let moviesIsPresent = JSON.parse(
-    localStorage.getItem("movieArrayAfterSearch")
-  );
+  // let moviesIsPresent = JSON.parse(
+  //   localStorage.getItem("movieArrayAfterSearch")
+  // );
   // let movies = JSON.parse(localStorage.getItem("films")) || [];
 
-  const [isLoading, setIsLoading] = React.useState(true); // изменение надписей кнопок при ожидании ответа от сервера
-  const [movieIsFound, setMovieIsFound] = React.useState(moviesIsPresent ? true : false); // управляет заглушкой "Ничего не найдено"
+  // const [isLoading, setIsLoading] = React.useState(true); // изменение надписей кнопок при ожидании ответа от сервера
+  // const [movieIsFound, setMovieIsFound] = React.useState
+  // (moviesIsPresent ? true : false); // управляет заглушкой "Ничего не найдено"
+
   const [isMobileMenuOpened, setIsMobileMenuOpened] = React.useState(false);
-  const [savedMovies, setSavedMovies] = React.useState([]); // массив фильмов для страницы сохраненных фильмов
+  // const [savedMovies, setSavedMovies] = React.useState([]); // массив фильмов для страницы сохраненных фильмов
 
   return (
     // <CurrentUserContext.Provider value={currentUser}>
@@ -67,6 +69,8 @@ function App() {
             <Route
               path="/movies"
               component={Movies}
+              isMobileMenuOpened={isMobileMenuOpened}
+              setIsMobileMenuOpened={setIsMobileMenuOpened}
             ></Route>
 
             <Route
@@ -75,8 +79,8 @@ function App() {
               // loggedIn={loggedIn}
               isMobileMenuOpened={isMobileMenuOpened}
               setIsMobileMenuOpened={setIsMobileMenuOpened}
-              setMovieIsFound={setMovieIsFound}
-              savedMovies={savedMovies}
+              // setMovieIsFound={setMovieIsFound}
+              // savedMovies={savedMovies}
               // movieList={filteredSavedMovies}
               // baseUrl={baseUrl}
 
