@@ -1,0 +1,20 @@
+export const DESKTOP = {
+  width: 1280,
+  startingCount: 12,
+  moreCount: 3,
+};
+
+export const TABLET = {
+  width: 768,
+  startingCount: 8,
+  moreCount: 2,
+};
+
+export const MOBILE = {
+  width: 320,
+  startingCount: 5,
+  moreCount: 2,
+};
+
+export const commonServerError =
+  "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз";
