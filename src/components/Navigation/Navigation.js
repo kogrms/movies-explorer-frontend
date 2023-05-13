@@ -1,5 +1,4 @@
 import React from "react";
-// import profilePath from "../../images/profile.svg";
 import { Link, Route } from "react-router-dom";
 
 function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {

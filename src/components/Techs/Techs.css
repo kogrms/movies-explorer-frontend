@@ -61,10 +61,6 @@
   padding: 21px 0 22px 0;
 }
 
-/* .techs__item:last-of-type {
-  margin-right: 0;
-} */
-
 @media screen and (max-width: 1279px) {
   .techs {
     padding: 90px 50px;
@@ -123,10 +119,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  /* .techs__item:last-of-type {
-    margin-right: 0;
-  } */
 
   .techs__item {
     margin-bottom: 10px;

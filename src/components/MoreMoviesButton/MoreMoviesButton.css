@@ -12,9 +12,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  border: 1px solid #E8E8E8;
-  border-radius: 3px;
-  min-width: 320px;
+  border: 1px solid #424242;
+  color: #FFFFFF;
+  border-radius: 6px;
+  width: 320px;
   background-color: transparent;
   padding-top: 10px;
   padding-bottom: 9px;
@@ -22,13 +23,14 @@
 }
 
 .more-movies-button-area__button:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   cursor: pointer;
 }
 
 
 @media screen and (max-width: 767px) {
   .more-movies-button-area__button {
-    max-width: 240px;
+    max-width: calc(100% - 80px);
+    min-width: 240px;
   }
 }

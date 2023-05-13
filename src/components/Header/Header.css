@@ -1,5 +1,4 @@
 .header {
-  /* width: calc(100% - 2*70px); */
   width: 100%;
   display: flex;
   justify-content: flex-start;

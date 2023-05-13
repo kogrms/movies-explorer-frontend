@@ -12,6 +12,7 @@
 
 .mobileMenu_active {
   display: block;
+  z-index: 1;
 }
 
 .mobileMenu__menu {
@@ -67,16 +68,6 @@
   font-size: 14px;
   line-height: 16px;
 }
-
-/* .mobileMenu__profile-image {
-  background-color: #F4F4F4;
-  border-radius: 6px;
-  background-image: url('../../images/profile.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 10px;
-  padding: 9px 9px;
-} */
 
 .mobileMenu__close-button {
   display: block;

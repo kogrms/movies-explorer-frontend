@@ -33,7 +33,6 @@
 
 .checkbox__button.checked {
   transform: translateX(17px);
-  /* margin-left: 34px; */
 }
 
 .checkbox-group__title {
@@ -46,9 +45,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* .checkbox-group {
-    margin-top: 29px;
-  } */
+
   .checkbox-container {
     position: absolute;
     left: calc(50% - 90px);
@@ -61,9 +58,4 @@
   .checkbox-group__title {
     font-size: 11px;
   }
-/* 
-  .checkbox-group__button {
-    margin: 0 13px 0 0;
-  } */
-
 }
