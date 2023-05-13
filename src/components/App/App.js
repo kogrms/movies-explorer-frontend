@@ -64,14 +64,11 @@ function App() {
               />
             </Route>
 
-            {/* <ProtectedRoute */}
             <Route
               path="/movies"
               component={Movies}
             ></Route>
-            {/* ></ProtectedRoute> */}
 
-            {/* <ProtectedRoute */}
             <Route
               path="/saved-movies"
               component={SavedMovies}

@@ -1,27 +1,15 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
-  const isLiked = savedMovies.some(item => (item.movieId === card.id));
+function MoviesCard({ card, isLiked, onLike, onDislike }) {
+  // const isLiked = savedMovies.some(item => (item.movieId === card.id));
   const filmDurationHours = Math.round(card.duration / 60);
   const filmDurationMinutes = card.duration % 60;
 
   function handleLikeClick() {
     onLike(
-      {
-        "country": card.country,
-        "director": card.director,
-        "duration": card.duration,
-        "year": card.year,
-        "description": card.description,
-        "image": card.image.url,
-        "trailerLink": card.trailerLink,
-        "nameRU": card.nameRU,
-        "nameEN": card.nameEN,
-        "thumbnail": card.image.previewUrl,
-        "movieId": card.id
-      }
-  );
+
+    );
   }
 
   function handleDislikeClick() {
@@ -30,8 +18,8 @@ function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
 
   return (
     <section className="card">
-      <a href={card.trailerLink} target="_blanc" className="card__link">
-        <img className="card__image" src={`${baseUrl}${card.image.url || card.image}`} alt={card.nameRU} />
+      <a href="/" target="_blanc" className="card__link">
+        <img className="card__image" src={card.image} alt="Кадр из фильма" />
       </a>
       <div className="card__title-block">
       <a href={card.trailerLink} target="_blanc" className="card__link">

@@ -30,14 +30,14 @@ function Movies({
   setSearchStringIsMissed,
 }) {
 
-   React.useEffect(() => {
-    if (movieList.length > 0) {
-      setMovieIsFound(true);
-    } else {
-      setMovieIsFound(false);
-    }
-    setIsLoading(false);
-  }, [movieList]);
+  //  React.useEffect(() => {
+  //   if (movieList.length > 0) {
+  //     setMovieIsFound(true);
+  //   } else {
+  //     setMovieIsFound(false);
+  //   }
+  //   setIsLoading(false);
+  // }, [movieList]);
 
   return (
     <section className="movies">
@@ -55,30 +55,30 @@ function Movies({
         setShortFilmsOnlyStatus={setShortFilmsOnlyStatus}
         setSearchStringIsMissed={setSearchStringIsMissed}
       />
-      {movieIsFound ? (
-        <div className="movies__results">
-          <MoviesCardList
-            movieList={movieList}
-            baseUrl={baseUrl}
-            onLike={onLike}
-            onDislike={onDislike}
-            savedMovies={savedMovies}
-            setSavedMovies={setSavedMovies}
-            shortFilmsOnlyStatus={shortFilmsOnlyStatus}
-            setMovieIsFound={setMovieIsFound}
-          />
-          {!allMoviesAreShown ? (
-            <MoreMoviesButton onMoreMoviesClick={onMoreMoviesClick} />
-          ) : (
-            <></>
-          )}
-        </div>
-      ) : (
+      {/* {movieIsFound ? ( */}
+      <div className="movies__results">
+        <MoviesCardList
+          movieList={movieList}
+          baseUrl={baseUrl}
+          onLike={onLike}
+          onDislike={onDislike}
+          // savedMovies={savedMovies}
+          // setSavedMovies={setSavedMovies}
+          shortFilmsOnlyStatus={shortFilmsOnlyStatus}
+          setMovieIsFound={setMovieIsFound}
+        />
+        {!allMoviesAreShown ? (
+          <MoreMoviesButton onMoreMoviesClick={onMoreMoviesClick} />
+        ) : (
+          <></>
+        )}
+      </div>
+      {/* ) : (
         <MoviesNotFound
           isLoading={isLoading}
           searchStringIsMissed={searchStringIsMissed}
         />
-      )}
+      )} */}
       <Footer />
     </section>
   );

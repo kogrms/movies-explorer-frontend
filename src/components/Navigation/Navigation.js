@@ -21,10 +21,10 @@ function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
           <Link to="saved-movies" className="navigation__link">
             Сохраненные фильмы
           </Link>
-          <Link to="profile" className="navigation__profile-link-block">
-            <p className="navigation__profile-link">Аккаунт</p>
-          </Link>
         </div>
+        <Link to="profile" className="navigation__profile-link-block">
+          <p className="navigation__profile-link">Аккаунт</p>
+        </Link>
         <div className="navigation__burger-menu">
           <button
             className="navigation__burger-menu-button"
@@ -44,10 +44,10 @@ function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
           >
             Сохраненные фильмы
           </Link>
-          <Link to="profile" className="navigation__profile-link-block">
-            <p className="navigation__profile-link">Аккаунт</p>
-          </Link>
         </div>
+        <Link to="profile" className="navigation__profile-link-block">
+          <p className="navigation__profile-link">Аккаунт</p>
+        </Link>
         <div className="navigation__burger-menu">
           <button
             className="navigation__burger-menu-button"
@@ -104,24 +104,24 @@ function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
         </>
         ) : (
           <>
-                <div className="navigation__link-block">
-                  <Link
-                    to="/signup"
-                    className="navigation__link navigation__link_start-page"
-                  >
-                    Регистрация
-                  </Link>
-                  <Link to="/signin" className="navigation__button-link">
-                    <button className="navigation__button">Войти</button>
-                  </Link>
-                </div>
-                <div className="navigation__burger-menu">
-                  <button
-                    className="navigation__burger-menu-button"
-                    onClick={onOpenMenu}
-                  ></button>
-                </div>
-              </>
+            <div className="navigation__link-unregblock">
+              <Link
+                to="/signup"
+                className="navigation__link navigation__link_start-page"
+              >
+                Регистрация
+              </Link>
+              <Link to="/signin" className="navigation__button-link">
+                <button className="navigation__button">Войти</button>
+              </Link>
+            </div>
+            <div className="navigation__burger-menu">
+              <button
+                className="navigation__burger-menu-button"
+                onClick={onOpenMenu}
+              ></button>
+            </div>
+          </>
         )}
       </Route>
     </section>

@@ -19,7 +19,7 @@ function Login ({ onEnterUser, isInputDisabled }) {
     <section className="login">
       <div className="login__content">
       <Link to="/" className="login__logo-link">
-      <img
+        <img
           className="login__logo"
           src={logoPath}
           alt="Логотип проекта Movies Explorer"
