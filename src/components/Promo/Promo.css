@@ -54,16 +54,12 @@
 
 @media screen and (max-width: 767px) {
   .promo {
-    /* width: 100%; */
     padding: 300px 44px 70px 44px;
     min-width: 260px;
     overflow: hidden;
   }
 
   .promo__logo {
-    /* margin-left: 55px;
-    margin-right: 55px; */
-    /* margin-bottom: 44px; */
     align-items: center;
     align-self: center;
     max-width: 680px;
@@ -78,8 +74,6 @@
   .promo__title {
     font-size: 31px;
     line-height: 39px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
     margin: 0;
     max-width: 100%;
     letter-spacing: -0.04em;
@@ -88,10 +82,8 @@
 
 @media screen and (max-width: 395px) {
   .promo {
-    /* width: 100%; */
     width: calc(100% - 20px);
     padding: 183px 10px 40px 10px;
-    /* overflow: hidden; */
   }
 
   .promo__text-block {

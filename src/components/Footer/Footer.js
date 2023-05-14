@@ -16,7 +16,7 @@ function Footer(props) {
             <a href="/" className="footer__link">
               Яндекс.Практикум
             </a>
-            <a href="/" className="footer__link">
+            <a href="https://github.com/kogrms" className="footer__link">
               Github
             </a>
           </div>

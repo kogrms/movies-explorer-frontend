@@ -29,7 +29,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie2,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Киноальманах «100 лет дизайна»",
               isLiked: false
             }}
           />
@@ -37,7 +37,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie3,
-              nameRU: "33 слова о дизайне",
+              nameRU: "В погоне за Бенкси",
               isLiked: false
             }}
           />
@@ -56,7 +56,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie2,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Киноальманах «100 лет дизайна»",
               isLiked: true
             }}
           />
@@ -64,7 +64,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie3,
-              nameRU: "33 слова о дизайне",
+              nameRU: "В погоне за Бенкси",
               isLiked: false
             }}
           />
@@ -72,7 +72,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie4,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Баския: Взрыв реальности",
               isLiked: false
             }}
           />
@@ -80,7 +80,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie5,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Бег это свобода",
               isLiked: true
             }}
           />
@@ -88,7 +88,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie6,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Книготорговцы",
               isLiked: false
             }}
           />
@@ -96,7 +96,7 @@ function MoviesCardList () {
             card={{
               duration: "1ч 42м",
               url: Movie7,
-              nameRU: "33 слова о дизайне",
+              nameRU: "Когда я думаю о Германии ночью",
               isLiked: false
             }}
           />

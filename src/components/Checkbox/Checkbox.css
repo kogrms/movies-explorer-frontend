@@ -44,7 +44,14 @@
   line-height: 18px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+
+  .checkbox-container {
+    padding-left: 19px;
+  }
+}
+
+@media screen and (max-width: 700px) {
 
   .checkbox-container {
     position: absolute;

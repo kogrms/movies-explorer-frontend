@@ -84,7 +84,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .card {
     display: flex;
     flex-direction: column-reverse;

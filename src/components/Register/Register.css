@@ -129,6 +129,7 @@ input {
   padding-bottom: 15px;
   margin-bottom: 16px;
   transition: opacity 0.4s linear;
+  cursor: pointer;
 }
 
 .register__button:hover {
@@ -138,6 +139,7 @@ input {
 .register__button_disabled {
   background: #2F2F2F;
   color: #8B8B8B;
+  cursor: default;
 }
 
 .register__sign-in-area {
