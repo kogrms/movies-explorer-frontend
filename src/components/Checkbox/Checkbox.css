@@ -26,16 +26,18 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #3DDC84;
+  /* background-color: #2F2F2F; */
+  background-color: #8B8B8B;
   margin-left: 2px;
   transition: all 0.2s ease-in-out;
 }
 
 .checkbox__button.checked {
   transform: translateX(17px);
+  background-color: #3DDC84;
 }
 
-.checkbox-group__title {
+.checkbox-title {
   padding: 0;
   margin: 0;
   margin-left: 14px;
@@ -62,7 +64,7 @@
     border: none;
   }
 
-  .checkbox-group__title {
+  .checkbox-title {
     font-size: 11px;
   }
 }

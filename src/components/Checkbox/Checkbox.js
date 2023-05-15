@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Checkbox() {
-  let isChecked = true;
+  const [isChecked, setIsChecked] = useState(false);
+
+  function handleClick() {
+    setIsChecked(!isChecked);
+  }
 
   return (
     <div className="checkbox-container">
       <div
         className="checkbox"
-        >
+        onClick={handleClick}
+      >
         <div className={`checkbox__button ${isChecked ? "checked" : ""}`} />
       </div>
-      <p className="checkbox-group__title">Короткометражки</p>
+      <p className="checkbox-title">Короткометражки</p>
     </div>
   );
 }

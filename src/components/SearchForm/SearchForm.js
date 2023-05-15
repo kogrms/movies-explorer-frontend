@@ -22,6 +22,7 @@ function SearchForm () {
             className="search__input search__input-movie"
             name="input-movie"
             placeholder="Фильм"
+            required
           />
           <button className="search__button">
             <img

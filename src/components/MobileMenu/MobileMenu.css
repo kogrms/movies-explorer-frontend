@@ -17,14 +17,17 @@
 
 .mobileMenu__menu {
   background-color: #202020;
-  position: absolute;
+  position: sticky;
   right: 0;
   top: 0;
+  bottom: 0;
   padding-left: 90px;
   padding-right: 90px;
   padding-top: 159px;
   padding-bottom: 92px;
   width: 44%;
+  left: 44%;
+  height: calc(100vh - 252px);
 }
 
 .mobileMenu__link-block {
@@ -57,7 +60,8 @@
   text-decoration: none;
   color: #FFFFFF;
   background-color: #313131;
-  margin-top: 583px;
+  /* margin-top: 583px; */
+  margin-top: calc(100vh - 426px);
   border-radius: 20px;
 }
 
@@ -97,6 +101,7 @@
   .mobileMenu__menu {
     padding: 144px 0 48px 0;
     width: 100%;
+    height: calc(100vh - 192px);
   }
 
   .mobileMenu__link {
@@ -105,6 +110,6 @@
   }
 
   .mobileMenu__profile-link-block {
-    margin-top: 411px;
+    margin-top: calc(100vh - 400px);
   }
 }

@@ -19,6 +19,7 @@ function Profile({ isMobileMenuOpened, setIsMobileMenuOpened }) {
               Имя
             </label>
             <input
+              required
               className="profile__input profile__input-name"
               id="name"
               type="text"
@@ -35,6 +36,7 @@ function Profile({ isMobileMenuOpened, setIsMobileMenuOpened }) {
               E-mail
             </label>
             <input
+              required
               className="profile__input profile__input-email"
               id="email"
               type="email"
