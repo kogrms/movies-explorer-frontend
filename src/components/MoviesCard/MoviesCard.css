@@ -1,0 +1,137 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background: #2F2F2F;
+}
+
+.card__title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 22px;
+  padding: 0;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.card__length {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8B8B8B;
+}
+
+.card__heart {
+  margin: 0;
+  padding: 0;
+  width: 14px;
+  height: 12px;
+  background: url("../../images/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.card__heart:hover {
+  cursor: pointer;
+}
+
+.card__heart_active {
+  background: url("../../images/heart-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.card__delete-button {
+  margin: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  background: url("../../images/button-delete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.card__delete-button:hover {
+  cursor: pointer;
+}
+
+.card__delete-button_hidden {
+  display: none;
+}
+
+.card__image {
+  margin: 6px;
+  padding: 0;
+  width: 220px;
+  height: 122px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    background: #2F2F2F;
+  }
+
+  .card__image {
+    margin: 0;
+    width: 100%;
+    height: min-content;
+  }
+
+  .card__title-block {
+    flex-wrap: wrap;
+    height: 40px;
+    margin: 0;
+    padding: 12px 14px;
+    position: relative;
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
+  }
+
+  .card__length {
+    margin: 0;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .card__heart {
+    margin: 0;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .card__delete-button {
+    margin: 0;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}

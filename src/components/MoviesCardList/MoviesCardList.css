@@ -1,0 +1,22 @@
+.movies-card-list {
+  width: 100%;
+  padding-top: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1279px) {
+  .movies-card-list {
+    margin-bottom: 30px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .movies-card-list {
+    gap: 20px;
+    margin-bottom: 26px;
+  }
+}
