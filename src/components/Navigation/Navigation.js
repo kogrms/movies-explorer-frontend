@@ -3,7 +3,6 @@ import { Link, Route } from "react-router-dom";
 
 function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
   function onOpenMenu() {
-    console.log(isMobileMenuOpened)
     setIsMobileMenuOpened(true);
   }
 

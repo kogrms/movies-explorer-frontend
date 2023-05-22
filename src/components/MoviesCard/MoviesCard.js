@@ -1,27 +1,46 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-function MoviesCard({ card }) {
+function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
+  const isLiked = savedMovies.some(item => (item.movieId === card.id));
+  const filmDurationHours = Math.round(card.duration / 60);
+  const filmDurationMinutes = card.duration % 60;
 
-  function handleLikeClick(card) {
-    card.isLiked = !card.isLiked;
+  function handleLikeClick() {
+    onLike(
+      {
+        "country": card.country,
+        "director": card.director,
+        "duration": card.duration,
+        "year": card.year,
+        "description": card.description,
+        "image": card.image.url,
+        "trailerLink": card.trailerLink,
+        "nameRU": card.nameRU,
+        "nameEN": card.nameEN,
+        "thumbnail": card.image.previewUrl,
+        "movieId": card.id
+      }
+    );
   }
 
-  function handleDislikeClick(card) {
-    card.isLiked = !card.isLiked;
+  function handleDislikeClick() {
+    onDislike(card);
   }
 
   return (
     <section className="card">
       <div className="card__title-block">
-        <p className="card__title">{card.nameRU}</p>
-        <p className="card__length">{card.duration}</p>
+        <a href={card.trailerLink} target="_blanc" className="card__link">
+          <p className="card__title">{card.nameRU}</p>
+        </a>
+        <p className="card__length">{`${filmDurationHours}ч ${filmDurationMinutes}м`}</p>
 
         <Route path="/movies">
           <button
-            className={`card__heart${card.isLiked ? " card__heart_active" : ""}`}
+            className={`card__heart${isLiked ? " card__heart_active" : ""}`}
             type="button"
-            onClick={card.isLiked ? handleDislikeClick(card) : handleLikeClick(card)}
+            onClick={isLiked ? handleDislikeClick : handleLikeClick}
             aria-label="В избранное"
           ></button>
         </Route>
@@ -36,7 +55,9 @@ function MoviesCard({ card }) {
         </Route>
 
       </div>
-      <img className="card__image" src={card.url} alt="Кадр из фильма" />
+      <a href={card.trailerLink} target="_blanc" className="card__link">
+        <img className="card__image" src={`${baseUrl}${card.image.url || card.image}`} alt={card.nameRU} />
+      </a>
     </section>
   );
 }

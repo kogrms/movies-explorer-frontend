@@ -1,13 +1,16 @@
+export const MAIN_API_BASE_URL = "https://api.diplom-kogrms.nomoredomains.monster";
+export const MOVIES_API_BASE_URL = "https://api.nomoreparties.co/beatfilm-movies";
+
 export const DESKTOP = {
   width: 1280,
-  startingCount: 12,
-  moreCount: 3,
+  startingCount: 7,
+  moreCount: 7,
 };
 
 export const TABLET = {
   width: 768,
-  startingCount: 8,
-  moreCount: 2,
+  startingCount: 7,
+  moreCount: 7,
 };
 
 export const MOBILE = {
@@ -18,3 +21,4 @@ export const MOBILE = {
 
 export const commonServerError =
   "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз";
+  
