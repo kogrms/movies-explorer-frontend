@@ -52,7 +52,7 @@ function App() {
     Boolean(localStorage.getItem("shortMovieOnly"))
   );
   const [currentWidth, setCurrentWidth] = React.useState(window.innerWidth);
-  const baseUrl = "https://api.nomoreparties.co/beatfilm-movies";
+  const baseUrl = "https://api.nomoreparties.co";
   const history = useHistory();
   const [isInputDisabled, setIsInputDisabled] = React.useState(false);
   const [searchStringIsMissed, setSearchStringIsMissed] = React.useState(

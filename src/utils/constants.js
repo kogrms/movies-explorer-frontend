@@ -1,5 +1,5 @@
 export const MAIN_API_BASE_URL = "https://api.diplom-kogrms.nomoredomains.monster";
-export const MOVIES_API_BASE_URL = "https://api.nomoreparties.co/beatfilm-movies";
+export const MOVIES_API_BASE_URL = "https://api.nomoreparties.co";
 
 export const DESKTOP = {
   width: 1280,
