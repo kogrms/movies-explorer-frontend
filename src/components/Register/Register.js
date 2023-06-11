@@ -32,6 +32,7 @@ function Register({ onAddUser, isInputDisabled }) {
               Имя
             </label>
             <input
+              required
               className="register__input register__input-name"
               {...register("name", {
                 minLength: {
@@ -57,6 +58,7 @@ function Register({ onAddUser, isInputDisabled }) {
               E-mail
             </label>
             <input
+              required
               className="register__input register__input-email"
               {...register('email', {
                 pattern: {
@@ -75,6 +77,7 @@ function Register({ onAddUser, isInputDisabled }) {
               Пароль
             </label>
             <input
+              required
               className="register__input register__input-password"
               {...register("password", {
                 minLength: {
@@ -86,7 +89,7 @@ function Register({ onAddUser, isInputDisabled }) {
                 },
                 required: "Поле Пароль должно быть заполнено"
             })}
-            id="password"
+              id="password"
               name="password"
               type="password"
               disabled={isInputDisabled}

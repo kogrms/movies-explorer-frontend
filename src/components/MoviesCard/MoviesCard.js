@@ -21,7 +21,7 @@ function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
         "thumbnail": card.image.previewUrl,
         "movieId": card.id
       }
-  );
+    );
   }
 
   function handleDislikeClick() {
@@ -30,20 +30,18 @@ function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
 
   return (
     <section className="card">
-      <a href={card.trailerLink} target="_blanc" className="card__link">
-        <img className="card__image" src={`${baseUrl}${card.image.url || card.image}`} alt={card.nameRU} />
-      </a>
       <div className="card__title-block">
-      <a href={card.trailerLink} target="_blanc" className="card__link">
-        <p className="card__title">{card.nameRU}</p>
-      </a>
+        <a href={card.trailerLink} target="_blanc" className="card__link">
+          <p className="card__title">{card.nameRU}</p>
+        </a>
+        <p className="card__length">{`${filmDurationHours}ч ${filmDurationMinutes}м`}</p>
 
         <Route path="/movies">
           <button
             className={`card__heart${isLiked ? " card__heart_active" : ""}`}
             type="button"
             onClick={isLiked ? handleDislikeClick : handleLikeClick}
-            aria-label="Нравится"
+            aria-label="В избранное"
           ></button>
         </Route>
 
@@ -57,7 +55,9 @@ function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
         </Route>
 
       </div>
-      <p className="card__length">{`${filmDurationHours}ч ${filmDurationMinutes}м`}</p>
+      <a href={card.trailerLink} target="_blanc" className="card__link">
+        <img className="card__image" src={`${baseUrl}${card.image.url || card.image}`} alt={card.nameRU} />
+      </a>
     </section>
   );
 }

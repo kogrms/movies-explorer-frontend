@@ -1,5 +1,7 @@
 import React from 'react';
 import Checkbox from '../Checkbox/Checkbox';
+import DarkSearchIcon from "../../images/search-dark.svg"
+import SearchIcon from "../../images/search.svg"
 
 function SearchForm ({
   setMovieIsFound,
@@ -10,7 +12,7 @@ function SearchForm ({
   setSearchStringIsMissed,
   isSavedMoviesPage,
   setIsLoading,
-})  {
+}) {
 
   const [searchingMovieTitle, setSearchingMovieTitle] = React.useState(lastSearchingString ? lastSearchingString : "");
 
@@ -47,8 +49,16 @@ function SearchForm ({
 
   return (
     <section className="search">
-      <form className="search__form" onSubmit={handleSearchMovies}>
+      <form
+        className="search__form"
+        onSubmit={handleSearchMovies}
+      >
         <fieldset className="search__fieldset">
+          <img
+            className="search__fieldset-icon"
+            src={DarkSearchIcon}
+            alt="Иконка поиска"
+          />
           <input
             type="text"
             id="input-movie"
@@ -58,13 +68,18 @@ function SearchForm ({
             value={searchingMovieTitle || ""}
             onChange={handleChangeMovieTitle}
           />
-          <button className="search__button">Поиск</button>
+          <button className="search__button">
+            <img
+              className="search__fieldset-icon"
+              src={SearchIcon}
+              alt="Иконка поиска"
+            />
+          </button>
+          <Checkbox
+            isChecked={shortFilmsOnlyStatus}
+            onCheckboxClick={handleChangeShortFilmsOnlyStatus}
+          />
         </fieldset>
-        <Checkbox
-          isChecked={shortFilmsOnlyStatus}
-          onCheckboxClick={handleChangeShortFilmsOnlyStatus}
-        />
-
       </form>
     </section>
   );

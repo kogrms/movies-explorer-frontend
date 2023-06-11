@@ -12,6 +12,13 @@
   align-items: center;
 }
 
+.navigation__link-unregblock {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .navigation__link {
   text-decoration: none;
   background-color: transparent;
@@ -41,7 +48,7 @@
 
 .navigation__button {
   background-color: #3DDC84;
-  color: #FFFFFF;
+  color: #000000;
   border-radius: 3px;
   border: none;
   min-height: 32px;
@@ -85,20 +92,6 @@
   line-height: 16px;
 }
 
-/* .navigation__profile-image {
-  background-color: #F4F4F4;
-  border-radius: 6px;
-  background-image: url('../../images/profile.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px 10px;
-  padding: 9px 9px;
-} */
-
-/* .navigation__profile-image_dark {
-  background-color: #DDDEE3;
-} */
-
 .navigation__burger-menu {
   display: none;
 }
@@ -123,6 +116,10 @@
   }
 
   .navigation__link-block {
+    display: none;
+  }
+
+  .navigation__link-unregblock {
     display: none;
   }
 
@@ -160,6 +157,5 @@
     background-size: 34px 36px;
     background-repeat: no-repeat;
     background-position: center;
-    /* height: 36px; */
   }
 }

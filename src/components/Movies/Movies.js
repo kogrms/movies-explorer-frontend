@@ -27,10 +27,10 @@ function Movies({
   shortFilmsOnlyStatus,
   setShortFilmsOnlyStatus,
   searchStringIsMissed,
-  setSearchStringIsMissed,
+  setSearchStringIsMissed
 }) {
 
-   React.useEffect(() => {
+  React.useEffect(() => {
     if (movieList.length > 0) {
       setMovieIsFound(true);
     } else {

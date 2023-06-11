@@ -19,7 +19,7 @@ function Login ({ onEnterUser, isInputDisabled }) {
     <section className="login">
       <div className="login__content">
       <Link to="/" className="login__logo-link">
-      <img
+        <img
           className="login__logo"
           src={logoPath}
           alt="Логотип проекта Movies Explorer"
@@ -33,6 +33,7 @@ function Login ({ onEnterUser, isInputDisabled }) {
               E-mail
             </label>
             <input
+              required
               className="login__input login__input-email"
               {...register('email', {
                 pattern: {
@@ -51,6 +52,7 @@ function Login ({ onEnterUser, isInputDisabled }) {
               Пароль
             </label>
             <input
+              required
               className="login__input register__input-password"
               {...register("password", {
                 minLength: {
