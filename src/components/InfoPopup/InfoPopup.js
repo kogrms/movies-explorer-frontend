@@ -2,7 +2,7 @@ import React from "react";
 import successImage from '../../images/success.png';
 import failImage from '../../images/fail.png';
 
-function InfoTooltipPopup({ isPopupOpen, messageText, isResultSuccess, onClose}) {
+function InfoPopup({ isPopupOpen, messageText, isResultSuccess, onClose}) {
   const popupMessageText = messageText;
 
   return (
@@ -25,4 +25,4 @@ function InfoTooltipPopup({ isPopupOpen, messageText, isResultSuccess, onClose})
   )
 }
 
-export default InfoTooltipPopup;
+export default InfoPopup;

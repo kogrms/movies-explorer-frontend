@@ -3,7 +3,7 @@ import Header from "../Header/Header.js";
 import { CurrentUserContext } from "../../contexts/currentUserContext";
 import { useForm } from 'react-hook-form';
 
-function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdateUser, onSignOut, setInfoTooltipMessage, setIsPopupOpen, setIsResultSuccess }) {
+function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdateUser, onSignOut, setInfoPopupMessage, setIsPopupOpen, setIsResultSuccess }) {
 
   const [isEditionMode, setIsEditionMode] = React.useState(false);
   const [isDisabled, setIsDisabled] = React.useState(true);
@@ -32,10 +32,10 @@ function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdate
       setIsEditionMode(false);
       setIsDisabled(true);
       setIsResultSuccess(true);
-      setInfoTooltipMessage("Новые данные успешно сохранены");
+      setInfoPopupMessage("Новые данные успешно сохранены");
       setIsPopupOpen(true);
     } else {
-      setInfoTooltipMessage("Данные не измененились");
+      setInfoPopupMessage("Данные не измененились");
       setIsPopupOpen(true);
     }
   }

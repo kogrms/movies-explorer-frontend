@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from "react-router-dom";
-import MoviesCard from '../MoviesCard/MoviesCard';
+import MovieCard from '../MovieCard/MovieCard';
 import { CurrentUserContext } from "../../contexts/currentUserContext";
 
 function MoviesCardList ({ movieList, savedMovies, baseUrl, onLike, onDislike }) {
@@ -22,7 +22,7 @@ function MoviesCardList ({ movieList, savedMovies, baseUrl, onLike, onDislike })
         if (userLocationPath === "/saved-movies") {
           if (movieItem.owner === currentUser._id) {
             return (
-              <MoviesCard
+              <MovieCard
                 key={movieItem._id}
                 card={movieItem}
                 baseUrl={baseUrl}
@@ -34,7 +34,7 @@ function MoviesCardList ({ movieList, savedMovies, baseUrl, onLike, onDislike })
           }
         } else {
           return (
-            <MoviesCard
+            <MovieCard
               key={movieItem.id}
               card={movieItem}
               baseUrl={baseUrl}

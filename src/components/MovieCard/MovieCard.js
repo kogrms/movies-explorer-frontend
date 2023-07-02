@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
+function MovieCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
   const isLiked = savedMovies.some(item => (item.movieId === card.id));
   const filmDurationHours = Math.round(card.duration / 60);
   const filmDurationMinutes = card.duration % 60;
@@ -62,4 +62,4 @@ function MoviesCard({ card, baseUrl, onLike, onDislike, savedMovies }) {
   );
 }
 
-export default MoviesCard;
+export default MovieCard;
