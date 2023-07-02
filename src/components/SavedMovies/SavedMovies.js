@@ -6,8 +6,8 @@ import Footer from "../Footer/Footer.js";
 
 function SavedMovies({
   loggedIn,
-  isMobileMenuOpened,
-  setIsMobileMenuOpened,
+  isBurgerMenuOpened,
+  setIsBurgerMenuOpened,
   setMovieIsFound,
   movieList,
   savedMovies,
@@ -23,8 +23,8 @@ function SavedMovies({
     <section className="movies">
       <Header
         loggedIn={loggedIn}
-        isMobileMenuOpened={isMobileMenuOpened}
-        setIsMobileMenuOpened={setIsMobileMenuOpened}
+        isBurgerMenuOpened={isBurgerMenuOpened}
+        setIsBurgerMenuOpened={setIsBurgerMenuOpened}
       />
       <SearchForm
         setMovieIsFound={setMovieIsFound}

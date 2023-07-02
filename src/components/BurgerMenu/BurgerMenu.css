@@ -1,4 +1,4 @@
-.mobileMenu {
+.burgerMenu {
   display: none;
   background-color: rgba(0, 0, 0, .3);
   position: absolute;
@@ -10,12 +10,12 @@
   height: 100%;
 }
 
-.mobileMenu_active {
+.burgerMenu_active {
   display: block;
   z-index: 1;
 }
 
-.mobileMenu__menu {
+.burgerMenu__menu {
   background-color: #202020;
   position: sticky;
   right: 0;
@@ -30,7 +30,7 @@
   height: calc(100vh - 252px);
 }
 
-.mobileMenu__link-block {
+.burgerMenu__link-block {
   font-size: 18px;
   line-height: 22px;
   display: flex;
@@ -42,18 +42,18 @@
   line-height: 22px;
 }
 
-.mobileMenu__link {
+.burgerMenu__link {
   padding-bottom: 4px;
   margin-bottom: 24px;
   text-decoration: none;
   color: #FFFFFF
 }
 
-.mobileMenu__active-link {
+.burgerMenu__active-link {
   border-bottom: 2px solid #FFFFFF;
 }
 
-.mobileMenu__profile-link-block {
+.burgerMenu__profile-link-block {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +65,7 @@
   border-radius: 20px;
 }
 
-.mobileMenu__profile-link {
+.burgerMenu__profile-link {
   margin: 0;
   padding: 8px 20px 8px 20px;
   font-weight: 500;
@@ -73,7 +73,7 @@
   line-height: 16px;
 }
 
-.mobileMenu__close-button {
+.burgerMenu__close-button {
   display: block;
   position: absolute;
   top: 22px;
@@ -90,7 +90,7 @@
   transition: transform 0.5s linear;
 }
 
-.mobileMenu__close-button:hover {
+.burgerMenu__close-button:hover {
   cursor: pointer;
   opacity: 0.7;
   transform: rotate(45deg);
@@ -98,18 +98,18 @@
 
 
 @media screen and (max-width: 767px) {
-  .mobileMenu__menu {
+  .burgerMenu__menu {
     padding: 144px 0 48px 0;
     width: 100%;
     height: calc(100vh - 192px);
   }
 
-  .mobileMenu__link {
+  .burgerMenu__link {
     padding-bottom: 7px;
     margin-bottom: 17px;
   }
 
-  .mobileMenu__profile-link-block {
+  .burgerMenu__profile-link-block {
     margin-top: calc(100vh - 400px);
   }
 }

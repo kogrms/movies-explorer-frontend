@@ -22,8 +22,8 @@ function Movies({
   allMoviesAreShown,
   lastSearchingString,
   loggedIn,
-  isMobileMenuOpened,
-  setIsMobileMenuOpened,
+  isBurgerMenuOpened,
+  setIsBurgerMenuOpened,
   shortFilmsOnlyStatus,
   setShortFilmsOnlyStatus,
   searchStringIsMissed,
@@ -43,8 +43,8 @@ function Movies({
     <section className="movies">
       <Header
         loggedIn={loggedIn}
-        isMobileMenuOpened={isMobileMenuOpened}
-        setIsMobileMenuOpened={setIsMobileMenuOpened}
+        isBurgerMenuOpened={isBurgerMenuOpened}
+        setIsBurgerMenuOpened={setIsBurgerMenuOpened}
       />
       <SearchForm
         setMovieIsFound={setMovieIsFound}

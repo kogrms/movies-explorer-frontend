@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 
-function Navigation({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
+function Navigation({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened }) {
   function onOpenMenu() {
-    setIsMobileMenuOpened(true);
+    setIsBurgerMenuOpened(true);
   }
 
   return (

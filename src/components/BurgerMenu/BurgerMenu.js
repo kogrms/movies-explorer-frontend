@@ -1,105 +1,105 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 
-function MobileMenu({ isMobileMenuOpened, setIsMobileMenuOpened }) {
+function BurgerMenu({ isBurgerMenuOpened, setIsBurgerMenuOpened }) {
   function onCloseMenu() {
-    setIsMobileMenuOpened(false);
+    setIsBurgerMenuOpened(false);
   }
 
   function onLinkClick() {
-    setIsMobileMenuOpened(false);
+    setIsBurgerMenuOpened(false);
   }
 
   return (
     <div
-      className={`mobileMenu${isMobileMenuOpened ? " mobileMenu_active" : ""}`}
+      className={`burgerMenu${isBurgerMenuOpened ? " burgerMenu_active" : ""}`}
     >
-      <div className="mobileMenu__menu">
-        <button className="mobileMenu__close-button" onClick={onCloseMenu} />
+      <div className="burgerMenu__menu">
+        <button className="burgerMenu__close-button" onClick={onCloseMenu} />
 
         <Route path="/movies">
-          <div className="mobileMenu__link-block">
-            <Link to="/" className="mobileMenu__link" onClick={onLinkClick}>
+          <div className="burgerMenu__link-block">
+            <Link to="/" className="burgerMenu__link" onClick={onLinkClick}>
               Главная
             </Link>
             <Link
               to="movies"
-              className="mobileMenu__link mobileMenu__active-link"
+              className="burgerMenu__link burgerMenu__active-link"
               onClick={onLinkClick}
             >
               Фильмы
             </Link>
             <Link
               to="saved-movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Сохраненные фильмы
             </Link>
             <Link
               to="profile"
-              className="mobileMenu__profile-link-block"
+              className="burgerMenu__profile-link-block"
               onClick={onLinkClick}
             >
-              <p className="mobileMenu__profile-link">Аккаунт</p>
+              <p className="burgerMenu__profile-link">Аккаунт</p>
             </Link>
           </div>
         </Route>
 
         <Route path="/saved-movies">
-          <div className="mobileMenu__link-block">
-            <Link to="/" className="mobileMenu__link" onClick={onLinkClick}>
+          <div className="burgerMenu__link-block">
+            <Link to="/" className="burgerMenu__link" onClick={onLinkClick}>
               Главная
             </Link>
             <Link
               to="movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Фильмы
             </Link>
             <Link
               to="saved-movies"
-              className="mobileMenu__link mobileMenu__active-link"
+              className="burgerMenu__link burgerMenu__active-link"
               onClick={onLinkClick}
             >
               Сохраненные фильмы
             </Link>
             <Link
               to="profile"
-              className="mobileMenu__profile-link-block"
+              className="burgerMenu__profile-link-block"
               onClick={onLinkClick}
             >
-              <p className="mobileMenu__profile-link">Аккаунт</p>
+              <p className="burgerMenu__profile-link">Аккаунт</p>
             </Link>
           </div>
         </Route>
 
         <Route path="/profile">
-          <div className="mobileMenu__link-block">
-            <Link to="/" className="mobileMenu__link" onClick={onLinkClick}>
+          <div className="burgerMenu__link-block">
+            <Link to="/" className="burgerMenu__link" onClick={onLinkClick}>
               Главная
             </Link>
             <Link
               to="movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Фильмы
             </Link>
             <Link
               to="saved-movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Сохраненные фильмы
             </Link>
             <Link
               to="profile"
-              className="mobileMenu__profile-link-block"
+              className="burgerMenu__profile-link-block"
               onClick={onLinkClick}
             >
-              <p className="mobileMenu__profile-link mobileMenu__active-link">
+              <p className="burgerMenu__profile-link burgerMenu__active-link">
                 Аккаунт
               </p>
             </Link>
@@ -107,34 +107,34 @@ function MobileMenu({ isMobileMenuOpened, setIsMobileMenuOpened }) {
         </Route>
 
         <Route exact path="/">
-          <div className="mobileMenu__link-block">
+          <div className="burgerMenu__link-block">
             <Link
               to="/"
-              className="mobileMenu__link mobileMenu__active-link"
+              className="burgerMenu__link burgerMenu__active-link"
               onClick={onLinkClick}
             >
               Главная
             </Link>
             <Link
               to="movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Фильмы
             </Link>
             <Link
               to="saved-movies"
-              className="mobileMenu__link"
+              className="burgerMenu__link"
               onClick={onLinkClick}
             >
               Сохраненные фильмы
             </Link>
             <Link
               to="profile"
-              className="mobileMenu__profile-link-block"
+              className="burgerMenu__profile-link-block"
               onClick={onLinkClick}
             >
-              <p className="mobileMenu__profile-link">Аккаунт</p>
+              <p className="burgerMenu__profile-link">Аккаунт</p>
             </Link>
           </div>
         </Route>
@@ -143,4 +143,4 @@ function MobileMenu({ isMobileMenuOpened, setIsMobileMenuOpened }) {
   );
 }
 
-export default MobileMenu;
+export default BurgerMenu;
