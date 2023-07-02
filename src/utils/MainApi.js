@@ -1,4 +1,4 @@
-import { MAIN_API_BASE_URL } from '../utils/constants';
+import { MAIN_API_URL } from '../utils/constants';
 
 class MainApi {
   constructor({ baseUrl, headers }) {
@@ -111,7 +111,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: MAIN_API_BASE_URL,
+  baseUrl: MAIN_API_URL,
   headers: {
     authorization: `Bearer ${localStorage.getItem('token') || ""}`,
     "content-type": "application/json",
