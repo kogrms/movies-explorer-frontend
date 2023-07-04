@@ -1,9 +1,9 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Checkbox from '../Checkbox/Checkbox';
 import DarkSearchIcon from "../../images/search-dark.svg"
 import SearchIcon from "../../images/search.svg"
 
-function SearchForm ({
+function SearchForm({
   setMovieIsFound,
   onSearch,
   lastSearchingString,
@@ -13,8 +13,7 @@ function SearchForm ({
   isSavedMoviesPage,
   setIsLoading,
 }) {
-
-  const [searchingMovieTitle, setSearchingMovieTitle] = React.useState(lastSearchingString ? lastSearchingString : "");
+  const [searchingMovieTitle, setSearchingMovieTitle] = useState(lastSearchingString || "");
 
   function handleChangeMovieTitle(e) {
     e.preventDefault();
@@ -22,30 +21,34 @@ function SearchForm ({
   }
 
   function handleChangeShortFilmsOnlyStatus() {
-      setShortFilmsOnlyStatus(shortFilmsOnlyStatus ? false : true);
-      if (searchingMovieTitle.length === 0) {
-        if (!isSavedMoviesPage) {
-          setSearchStringIsMissed(true);
-        }
-        setMovieIsFound(false);
-      } else {
-        setMovieIsFound(true);
-      }
+    setShortFilmsOnlyStatus(!shortFilmsOnlyStatus);
+    updateMovieIsFoundState();
   }
 
   function handleSearchMovies(e) {
     e.preventDefault();
-    if (isSavedMoviesPage) {
+    if (isSavedMoviesPage || searchingMovieTitle.length > 0) {
+      setSearchStringIsMissed(false);
       onSearch(searchingMovieTitle, shortFilmsOnlyStatus);
-    } else if (searchingMovieTitle.length === 0) {
+    } else {
       setSearchStringIsMissed(true);
       setIsLoading(false);
       setMovieIsFound(false);
-    } else {
-      setSearchStringIsMissed(false);
-      onSearch(searchingMovieTitle, shortFilmsOnlyStatus);
     }
   }
+
+  function updateMovieIsFoundState() {
+    if (searchingMovieTitle.length === 0 && !isSavedMoviesPage) {
+      setSearchStringIsMissed(true);
+      setMovieIsFound(false);
+    } else {
+      setMovieIsFound(true);
+    }
+  }
+
+  useEffect(() => {
+    updateMovieIsFoundState();
+  }, [searchingMovieTitle, isSavedMoviesPage]);
 
   return (
     <section className="search">
@@ -65,10 +68,10 @@ function SearchForm ({
             className="search__input search__input-movie"
             name="input-movie"
             placeholder="Фильм"
-            value={searchingMovieTitle || ""}
+            value={searchingMovieTitle}
             onChange={handleChangeMovieTitle}
           />
-          <button className="search__button">
+          <button className="search__button" type="submit">
             <img
               className="search__fieldset-icon"
               src={SearchIcon}
