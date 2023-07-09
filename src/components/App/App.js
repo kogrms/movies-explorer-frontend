@@ -175,7 +175,7 @@ function App() {
       const lowerCaseNameRU = item.nameRU.toLowerCase();
       const lowerCaseNameEN = item.nameEN.toLowerCase();
       return shortMovieOnly
-        ? (item.duration <= 40 && (lowerCaseNameRU.includes(lowerCaseSearchString) || lowerCaseNameEN.includes(lowerCaseSearchString)))
+        ? (item.duration <= constants.SHORTMOVIEDURATION && (lowerCaseNameRU.includes(lowerCaseSearchString) || lowerCaseNameEN.includes(lowerCaseSearchString)))
         : (lowerCaseNameRU.includes(lowerCaseSearchString) || lowerCaseNameEN.includes(lowerCaseSearchString));
     });
   };
@@ -195,7 +195,7 @@ function App() {
   };
   const handleFindSavedMovies = (stringToSearch, shortMovieOnly) => {
     const searchedMoviesArray = savedMovies.filter((item) => {
-      const isShortMovie = item.duration <= 40;
+      const isShortMovie = item.duration <= constants.SHORTMOVIEDURATION;
       const hasMatchingName = checkMovieName(item, stringToSearch);
       return shortMovieOnly ? (isShortMovie && hasMatchingName) : hasMatchingName;
     });
