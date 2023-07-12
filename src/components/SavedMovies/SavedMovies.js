@@ -6,8 +6,8 @@ import Footer from "../Footer/Footer.js";
 
 function SavedMovies({
   loggedIn,
-  isMobileMenuOpened,
-  setIsMobileMenuOpened,
+  isBurgerMenuOpened,
+  setIsBurgerMenuOpened,
   setMovieIsFound,
   movieList,
   savedMovies,
@@ -15,6 +15,7 @@ function SavedMovies({
   onLike,
   onDislike,
   onSearch,
+  setSearchStringIsMissed,
 }) {
 
   const [shortSavedFilmsOnlyStatus, setShortSavedFilmsOnlyStatus] = React.useState(false);
@@ -23,8 +24,8 @@ function SavedMovies({
     <section className="movies">
       <Header
         loggedIn={loggedIn}
-        isMobileMenuOpened={isMobileMenuOpened}
-        setIsMobileMenuOpened={setIsMobileMenuOpened}
+        isBurgerMenuOpened={isBurgerMenuOpened}
+        setIsBurgerMenuOpened={setIsBurgerMenuOpened}
       />
       <SearchForm
         setMovieIsFound={setMovieIsFound}
@@ -32,6 +33,7 @@ function SavedMovies({
         isSavedMoviesPage="true"
         shortFilmsOnlyStatus={shortSavedFilmsOnlyStatus}
         setShortFilmsOnlyStatus={setShortSavedFilmsOnlyStatus}
+        setSearchStringIsMissed={setSearchStringIsMissed}
       />
       <MoviesCardList
         movieList={movieList}

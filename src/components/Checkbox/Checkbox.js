@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Checkbox() {
-  const [isChecked, setIsChecked] = useState(false);
+function Checkbox({ isChecked, onCheckboxClick }) {
 
-  function handleClick() {
-    setIsChecked(!isChecked);
-  }
+  const handleCheckboxClick = () => {
+    onCheckboxClick();
+  };
 
   return (
     <div className="checkbox-container">
       <div
         className="checkbox"
-        onClick={handleClick}
+        onClick={handleCheckboxClick}
       >
         <div className={`checkbox__button ${isChecked ? "checked" : ""}`} />
       </div>

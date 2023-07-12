@@ -95,7 +95,7 @@
   padding: 0;
 }
 
-.profile__text-button {
+.profile__edit-button {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -107,7 +107,7 @@
   transition: opacity 0.4s linear;
 }
 
-.profile__text-button:hover {
+.profile__edit-button:hover {
   cursor: pointer;
   opacity: 0.7;
 }
@@ -186,7 +186,7 @@
     margin-bottom: 380px;
   }
 
-  .profile__text-button {
+  .profile__edit-button {
     font-size: 12px;
     line-height: 15px;
   }

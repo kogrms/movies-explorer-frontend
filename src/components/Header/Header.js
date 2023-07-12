@@ -2,9 +2,9 @@ import React from "react";
 import logoPath from "../../images/header-logo.svg";
 import Navigation from "../Navigation/Navigation";
 import { Link, useLocation } from "react-router-dom";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
-function Header({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
+function Header({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened }) {
   const userLocationPath = useLocation().pathname;
 
   return (
@@ -25,12 +25,12 @@ function Header({ loggedIn, isMobileMenuOpened, setIsMobileMenuOpened }) {
 
       <Navigation
         loggedIn={loggedIn}
-        isMobileMenuOpened={isMobileMenuOpened}
-        setIsMobileMenuOpened={setIsMobileMenuOpened}
+        isBurgerMenuOpened={isBurgerMenuOpened}
+        setIsBurgerMenuOpened={setIsBurgerMenuOpened}
       />
-      <MobileMenu
-        isMobileMenuOpened={isMobileMenuOpened}
-        setIsMobileMenuOpened={setIsMobileMenuOpened}
+      <BurgerMenu
+        isBurgerMenuOpened={isBurgerMenuOpened}
+        setIsBurgerMenuOpened={setIsBurgerMenuOpened}
       />
     </header>
   );
