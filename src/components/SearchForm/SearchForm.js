@@ -26,7 +26,7 @@ function SearchForm({
   }
 
   function handleSearchMovies(e) {
-    e.preventDefault();
+    if (e) {e.preventDefault()};
     if (isSavedMoviesPage || searchingMovieTitle.length > 0) {
       setSearchStringIsMissed(false);
       onSearch(searchingMovieTitle, shortFilmsOnlyStatus);
@@ -49,6 +49,10 @@ function SearchForm({
   useEffect(() => {
     updateMovieIsFoundState();
   }, [searchingMovieTitle, isSavedMoviesPage]);
+
+  useEffect(() => {
+    handleSearchMovies();
+  }, [shortFilmsOnlyStatus]);
 
   return (
     <section className="search">

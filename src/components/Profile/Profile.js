@@ -7,6 +7,7 @@ function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdate
 
   const [isEditionMode, setIsEditionMode] = React.useState(false);
   const [isDisabled, setIsDisabled] = React.useState(true);
+  const [isSubmitDisabled, setIsSubmitDisabled] = React.useState(true);
   const currentUser = React.useContext(CurrentUserContext);
 
   const {
@@ -24,6 +25,12 @@ function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdate
   function handleSignOut(e) {
     e.preventDefault();
     onSignOut();
+  }
+
+  const onChange = (data) => {
+    if (data.name === currentUser.name || data.email === currentUser.email) {
+      setIsSubmitDisabled(true)
+    } else setIsSubmitDisabled(false)
   }
 
   const onSubmit = (data) => {
@@ -115,7 +122,7 @@ function Profile({ loggedIn, isBurgerMenuOpened, setIsBurgerMenuOpened, onUpdate
                   (!isValid || !isDirty) ? " profile__save-button_disabled" : ""
                 }`}
                 type="submit"
-                disabled={!isValid || !isDirty}
+                disabled={!isValid || !isDirty || isSubmitDisabled}
               >
                 Сохранить
               </button>

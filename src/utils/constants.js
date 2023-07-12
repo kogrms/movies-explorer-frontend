@@ -16,7 +16,7 @@ export const TABLET = {
 export const MOBILE = {
   width: 320,
   startingCount: 5,
-  moreCount: 2,
+  moreCount: 5,
 };
 
 export const SHORTMOVIEDURATION = 40;

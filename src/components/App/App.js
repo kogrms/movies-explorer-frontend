@@ -390,6 +390,7 @@ function App() {
               onLike={handleLikeClick}
               onDislike={handleDeleteFromSaved}
               onSearch={handleFindSavedMovies}
+              setSearchStringIsMissed={setSearchStringIsMissed}
             ></ProtectedRoute>
 
             <ProtectedRoute

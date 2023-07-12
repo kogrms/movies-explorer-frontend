@@ -15,6 +15,7 @@ function SavedMovies({
   onLike,
   onDislike,
   onSearch,
+  setSearchStringIsMissed,
 }) {
 
   const [shortSavedFilmsOnlyStatus, setShortSavedFilmsOnlyStatus] = React.useState(false);
@@ -32,6 +33,7 @@ function SavedMovies({
         isSavedMoviesPage="true"
         shortFilmsOnlyStatus={shortSavedFilmsOnlyStatus}
         setShortFilmsOnlyStatus={setShortSavedFilmsOnlyStatus}
+        setSearchStringIsMissed={setSearchStringIsMissed}
       />
       <MoviesCardList
         movieList={movieList}
